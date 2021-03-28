@@ -1,5 +1,6 @@
 # useful-linux-scripts
 This repository initially contains some of the very commonly used shell scripts. Over time I will add more of them. Have fun.
+
 The repo structure is as follows:
 ```
 ├── ubuntu-18.04-cuda-v10.2-cudnn-v7.6.5
