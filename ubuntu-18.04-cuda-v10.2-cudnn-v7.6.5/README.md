@@ -1,20 +1,20 @@
-# Installing cuda-11.2 and cudnn-8.1.0 for Ubuntu 20.04
-The individual steps for installing cuda 11.2 and cudnn-8.1.0 in a Ubuntu 20.04 system is given below with necessary explanations. If your are stuck with any issues, feel free to create an issue here, I will quickly fix that. Thank you
+# Installing cuda-10.2 and cudnn-7.6.5 for Ubuntu 18.04
+The individual steps for installing cuda 10.2 and cudnn-7.6.5 in a Ubuntu 18.04 system is given below with necessary explanations. If your are stuck with any issues, feel free to create an issue here, I will quickly fix that. Thank you
 
 ## Installing with the Scripts:
 If you just want a quick build build in a fresh machine, please use the scripts. Make sure that you have added executable permission to the scripts to run in your system. To do that, run the following:
 
 ```
-chmod +x machine-config-part1.sh
-chmod +x machine-config-part2.sh
+chmod +x machine-configuration-part1.sh
+chmod +x machine-configuration-part2.sh
 ```
 After that you can run the scripts from their directory by 
 ```
-./machine-config-part1.sh
+./machine-configuration-part1.sh
 ```
 After running the first script, your system will automatically restart. After the reboot run the second script with the following command
 ```
-./machine-config-part2.sh
+./machine-configuration-part2.sh
 ```
 
 ### Step 1: Install Git if it is not there. 
@@ -50,11 +50,11 @@ cd ..
 ### Step 4: Install CUDA 10.2 (Nvidia GPU only!)
 *NOTE:* YOLO Darknet from AlexeyAB repository can be used with CUDA 11.2
 ```
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
-sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
-wget https://developer.download.nvidia.com/compute/cuda/11.2.2/local_installers/cuda-repo-ubuntu2004-11-2-local_11.2.2-460.32.03-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu2004-11-2-local_11.2.2-460.32.03-1_amd64.deb
-sudo apt-key add /var/cuda-repo-ubuntu2004-11-2-local/7fa2af80.pub
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-ubuntu1804.pin
+sudo mv cuda-ubuntu1804.pin /etc/apt/preferences.d/cuda-repository-pin-600
+wget https://developer.download.nvidia.com/compute/cuda/10.2/Prod/local_installers/cuda-repo-ubuntu1804-10-2-local-10.2.89-440.33.01_1.0-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804-10-2-local-10.2.89-440.33.01_1.0-1_amd64.deb
+sudo apt-key add /var/cuda-repo-10-2-local-10.2.89-440.33.01/7fa2af80.pub
 sudo apt-get update
 sudo apt-get -y install cuda
 sudo reboot
@@ -67,20 +67,20 @@ nvidia-smi
 
 ### Step 7: Export cuda library to system \$PATH
 ```
-echo "export PATH=/usr/local/cuda-11.2/bin${PATH:+:${PATH}}$" >> ~/.bashrc
-echo "export LD_LIBRARY_PATH=/usr/local/cuda-11.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> ~/.bashrc
+echo "export PATH=/usr/local/cuda-10.2/bin${PATH:+:${PATH}}$" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> ~/.bashrc
 source ~/.bashrc
 sudo ldconfig
 ```
 
 ### Step 8: Installing cuDNN (runtime + developer + examples)
 ```
-wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.1.0.77/11.2_20210127/Ubuntu20_04-x64/libcudnn8_8.1.0.77-1+cuda11.2_amd64.deb
-wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.1.0.77/11.2_20210127/Ubuntu20_04-x64/libcudnn8-dev_8.1.0.77-1+cuda11.2_amd64.deb
-wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/8.1.0.77/11.2_20210127/Ubuntu20_04-x64/libcudnn8-samples_8.1.0.77-1+cuda11.2_amd64.deb
-sudo dpkg -i libcudnn8_8.1.0.77-1+cuda11.2_amd64.deb
-sudo dpkg -i libcudnn8-dev_8.1.0.77-1+cuda11.2_amd64.deb
-sudo dpkg -i libcudnn8-samples_8.1.0.77-1+cuda11.2_amd64.deb
+wget https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/libcudnn7_7.6.5.32-1+cuda10.2_amd64.deb
+wget https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/libcudnn7-dev_7.6.5.32-1+cuda10.2_amd64.deb
+wget https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.5.32/Production/10.2_20191118/Ubuntu18_04-x64/libcudnn7-doc_7.6.5.32-1%2Bcuda10.2_amd64.deb
+sudo dpkg -i libcudnn7_7.6.5.32-1+cuda10.2_amd64.deb
+sudo dpkg -i libcudnn7-dev_7.6.5.32-1+cuda10.2_amd64.deb
+sudo dpkg -i libcudnn7-doc_7.6.5.32-1+cuda10.2_amd64.deb
 ```
 
 
