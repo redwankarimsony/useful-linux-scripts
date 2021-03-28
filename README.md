@@ -5,10 +5,12 @@ The repo structure is as follows:
 ```
 ├── ubuntu-18.04-cuda-v10.2-cudnn-v7.6.5
 │   ├── machine-configuration-part1.sh
-│   └── machine-configuration-part2.sh
+│   ├── machine-configuration-part2.sh
+│   └── README.md
 ├── ubuntu-20.04-cuda-v11.2-cudnn-v8.1.0
 │   ├── machine-config-part1.sh
-│   └── machine-config-part2.sh
+│   ├── machine-config-part2.sh
+│   └── README.md
 ├── LICENSE
 └── README.md
 ```
