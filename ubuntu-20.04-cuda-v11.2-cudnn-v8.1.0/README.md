@@ -1,4 +1,21 @@
 # Installing cuda-11.2 and cudnn-8.1.0 for Ubuntu 20.04
+The individual steps for installing cuda 11.2 and cudnn-8.1.0 in a Ubuntu 20.04 system is given below with necessary explanations. 
+
+## Installing with the Scripts:
+If you just want a quick build build in a fresh machine, please use the scripts. Make sure that you have added executable permission to the scripts to run in your system. To do that, run the following:
+
+```
+chmod +x machine-config-part1.sh
+chmod +x machine-config-part2.sh
+```
+After that you can run the scripts from their directory by 
+```
+./machine-config-part1.sh
+```
+After running the first script, your system will automatically restart. After the reboot run the second script with the following command
+```
+./machine-config-part2.sh
+```
 
 ### Step 1: Install Git if it is not there. 
 ```
@@ -6,6 +23,7 @@ sudo apt-get install git
 git --version
 ```
 
+## Installing step-by-step:
 
 ### Step 2: Install the necessary compiler packages.
 `libssl-dev`: This package is part of the OpenSSL project's implementation of the SSL and TLS cryptographic protocols for secure communication over the Internet.<br>
