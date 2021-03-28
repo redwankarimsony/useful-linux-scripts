@@ -1,5 +1,5 @@
 # Installing cuda-11.2 and cudnn-8.1.0 for Ubuntu 20.04
-The individual steps for installing cuda 11.2 and cudnn-8.1.0 in a Ubuntu 20.04 system is given below with necessary explanations. 
+The individual steps for installing cuda 11.2 and cudnn-8.1.0 in a Ubuntu 20.04 system is given below with necessary explanations. If your are stuck with any issues, feel free to create an issue here, I will quickly fix that. Thank you
 
 ## Installing with the Scripts:
 If you just want a quick build build in a fresh machine, please use the scripts. Make sure that you have added executable permission to the scripts to run in your system. To do that, run the following:
