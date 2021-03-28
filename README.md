@@ -12,5 +12,5 @@ The repo structure is as follows:
 └── README.md
 ```
 
-* [Installing cuda-11.2 and cudnn-8.1.0 for Ubuntu 20.04](./useful-linux-scripts/ubuntu-20.04-cuda-v11.2-cudnn-v8.1.0/)
-* [Installing cuda-10.2 and cudnn-7.6.5 for Ubuntu 18.04](./useful-linux-scripts/ubuntu-18.04-cuda-v10.2-cudnn-v7.6.5/)
+* [Installing cuda-11.2 and cudnn-8.1.0 for Ubuntu 20.04](./ubuntu-20.04-cuda-v11.2-cudnn-v8.1.0/)
+* [Installing cuda-10.2 and cudnn-7.6.5 for Ubuntu 18.04](./ubuntu-18.04-cuda-v10.2-cudnn-v7.6.5/)
