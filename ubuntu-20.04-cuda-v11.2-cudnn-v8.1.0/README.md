@@ -1,4 +1,4 @@
-# Installing cuda-11.2 and cudnn-8.1.0 YOLO-darknet for Ubuntu 20.04
+# Installing cuda-11.2 and cudnn-8.1.0 for Ubuntu 20.04
 
 ### Step 1: Install Git if it is not there. 
 ```
@@ -78,15 +78,17 @@ sudo apt-get -y install python3-opencv libopencv-dev libopencv-core-dev
 sudo pip3 install opencv-python
 ```
 
-### Step 11: Installing AAlexyAB/darknet
+### Step 11: Installing AAlexyAB/darknet (Additional)
+
 ```
 git clone https://github.com/AlexeyAB/darknet
 cd darknet
+```
+Please check your GPU model and based on your GPU model, uncomment the `ARCH` variable in the `Makefile`. After that you can run the following commands in the terminal to compile.
+```
 sed -i 's/OPENCV=0/OPENCV=1/' Makefile
 sed -i 's/GPU=0/GPU=1/' Makefile
 sed -i 's/CUDNN=0/CUDNN=1/' Makefile
 sed -i 's/LIBSO=0/LIBSO=1/' Makefile
 make
 ```
-
-
