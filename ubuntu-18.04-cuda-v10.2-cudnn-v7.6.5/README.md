@@ -17,13 +17,13 @@ After running the first script, your system will automatically restart. After th
 ./machine-configuration-part2.sh
 ```
 
+
+## Installing step-by-step:
 ### Step 1: Install Git if it is not there. 
 ```
 sudo apt-get install git
 git --version
 ```
-
-## Installing step-by-step:
 
 ### Step 2: Install the necessary compiler packages.
 `libssl-dev`: This package is part of the OpenSSL project's implementation of the SSL and TLS cryptographic protocols for secure communication over the Internet.<br>
